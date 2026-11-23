@@ -3,7 +3,7 @@
 All mods target **Minecraft 1.20.1, Forge 47.4.x, Java 17** and build with Gradle (ModDevGradle legacy Forge).
 
 ```sh
-git clone https://github.com/GTInfinityAscension/GTIACore.git
+git clone https://github.com/Type-Omega/TypeOmegaCore.git
 cd GTIACore
 ./gradlew build
 ./gradlew runGameTestServer -PgtiaDevOptionalDependencies=true
@@ -24,11 +24,11 @@ The pack is managed with packwiz. `manifest/full.lock.json` is the source of tru
 
 ## Organisation Maven
 
-Released mod jars are published at **https://gtinfinityascension.github.io/maven/** (no login needed). The [maven repository](https://github.com/GTInfinityAscension/maven) checks for new GitHub releases every 6 hours and keeps the newest 5 versions of each artifact.
+Released mod jars are published at **https://type-omega.github.io/maven/** (no login needed). The [maven repository](https://github.com/Type-Omega/maven) checks for new GitHub releases every 6 hours and keeps the newest 5 versions of each artifact.
 
 ```groovy
 repositories {
-    maven { url = 'https://gtinfinityascension.github.io/maven/' }
+    maven { url = 'https://type-omega.github.io/maven/' }
 }
 dependencies {
     modCompileOnly("com.raishxn.gtna:gtna:0.6.0") { transitive = false }

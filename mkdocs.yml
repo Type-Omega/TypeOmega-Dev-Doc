@@ -1,8 +1,8 @@
 site_name: GTIA Dev Docs
-site_url: https://gtinfinityascension.github.io/GTIA-Dev-Doc/
+site_url: https://type-omega.github.io/TypeOmega-Dev-Doc/
 site_description: Vision, governance and development guides for GregTech Infinity Ascension
-repo_url: https://github.com/GTInfinityAscension/GTIA-Dev-Doc
-repo_name: GTInfinityAscension/GTIA-Dev-Doc
+repo_url: https://github.com/Type-Omega/TypeOmega-Dev-Doc
+repo_name: Type-Omega/TypeOmega-Dev-Doc
 copyright: "GregTech Infinity Ascension team"
 
 theme:

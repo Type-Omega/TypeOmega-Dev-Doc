@@ -2,7 +2,7 @@
 
 | Channel | How it is made | Who it is for |
 | --- | --- | --- |
-| **Nightly** | Every push to `main` of the modpack replaces the [`nightly` pre-release](https://github.com/GTInfinityAscension/GregTech-Infinity-Ascension/releases/tag/nightly) | Testers who want the latest build |
+| **Nightly** | Every push to `main` of the modpack replaces the [`nightly` pre-release](https://github.com/Type-Omega/TypeOmega/releases/tag/nightly) | Testers who want the latest build |
 | **dev / pre / alpha** | The Package workflow run by hand with a tag such as `0.1.0-dev-5`, `0.1.0-pre-1` or `0.1.0-alpha` | Testers following a milestone |
 | **beta** | The same workflow with a `-beta` tag | The first channel published as stable |
 
@@ -12,4 +12,4 @@ Changelogs and release notes are written in English. Mods (GTIACore, GTNA, Agron
 
 ## Mobile
 
-The pack targets Android through the Amethyst launcher with the `.mrpack` build, the same way GTNH supports mobile; the player guide is [docs/MOBILE.md](https://github.com/GTInfinityAscension/GregTech-Infinity-Ascension/blob/main/docs/MOBILE.md). The `.mrpack` is built by `tools/mrpack.py` (`--test` embeds the CurseForge-only mods, for private tests only). Only the official `.mrpack` with default configs is supported; mobile bugs use the mobile issue form.
+The pack targets Android through the Amethyst launcher with the `.mrpack` build, the same way GTNH supports mobile; the player guide is [docs/MOBILE.md](https://github.com/Type-Omega/TypeOmega/blob/main/docs/MOBILE.md). The `.mrpack` is built by `tools/mrpack.py` (`--test` embeds the CurseForge-only mods, for private tests only). Only the official `.mrpack` with default configs is supported; mobile bugs use the mobile issue form.
