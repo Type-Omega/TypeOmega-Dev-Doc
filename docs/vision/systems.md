@@ -33,6 +33,6 @@
 - Electrical explosions, hot and toxic fluids, radiation, with GTCEu's standard punishment.
 - Cleanrooms and inert atmospheres. Safety gear comes with corporate-humour quests.
 
-## Modes (GTIA Rules)
+## One mode
 
-Journey, Normal and Custom presets, chosen when the world is created and then locked. Rules change recipes and numbers, never registries, so changing a preset never needs a game restart.
+Every world plays the same balance, the former Normal (D-436): maintenance from LV, steam through pipes, the same recipes, quests and rewards. There are no world rules and no difficulty presets.
