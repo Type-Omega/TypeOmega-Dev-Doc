@@ -28,5 +28,5 @@ These rules apply to every mod in the organisation.
 ## Content
 
 - Content (machines, recipes, materials) lives in Java. KubeJS only removes or blocks recipes.
-- Multiblock tooltips use `MultiblockTooltip.builder()` of TypeOmega Lib in the GTNH layout (D-410), with the structure section read from the GTCEu pattern by `GtceuPatterns` and always shown (D-428, D-430).
+- Multiblock tooltips use `MultiblockTooltip.builder()` of TypeOmega Lib in the GTNH layout (D-410), without a structure section or a pollution line (D-431); only the modes and the "Supports ...!" line are read from the GTCEu pattern by `GtceuPatterns`, and nothing hides behind Shift (D-428).
 - The author's textures and art are never replaced without the author's approval.
