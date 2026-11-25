@@ -8,7 +8,7 @@
 
 Only the newest release of each group is kept (the newest beta and the newest dev/pre/alpha); the nightly is never removed by a versioned release.
 
-Changelogs and release notes are written in English. Mods (GTIACore, GTNA, Agronomica) release on their own and the pack pins exact versions with SHA-256 in `manifest/full.lock.json`.
+Changelogs and release notes are written in English. Mods (TypeOmegaCore, GTNA, Agronomica) release on their own and the pack pins exact versions with SHA-256 in `manifest/full.lock.json`.
 
 ## Mobile
 

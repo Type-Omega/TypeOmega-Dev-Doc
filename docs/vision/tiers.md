@@ -10,7 +10,7 @@ The full roadmap exists as a guide; a tier is only polished after the previous o
 | **MV** | 4–6 | Gems and laser engraving, silicon and chips, stainless steel and Kanthal; Bayer, Hall-Héroult, Contact, Haber-Bosch and Solvay as recipes in GTCEu machines. **AE2 storage and first automation.** Agronomica crops in the GTNA Greenhouse |
 | **HV** | 6–10 | Full refining, AE2 refinement (Assembler Matrix), Flux Matrix wireless energy with losses, the Rocket Assembler and the Moon, bees |
 | **EV** | 6–10 | Full wireless energy, fission, nitrobenzene and gas turbines, Mars and Venus/Mercury, electric Void Miner per planet, zero gravity (in space or a ground simulator), the End |
-| **IV+** | 10+ | GTIA's own planets, Mega versions of the chemistry plants (rotary kiln, membrane cell, Hall-Héroult lines, double absorption) |
+| **IV+** | 10+ | Type Omega's own planets, Mega versions of the chemistry plants (rotary kiln, membrane cell, Hall-Héroult lines, double absorption) |
 
 Gases come from planets: CO₂ on Mars, H₂SO₄ on Venus. Rare elements only appear as by-products of specific lines.
 

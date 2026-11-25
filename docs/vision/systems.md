@@ -7,11 +7,11 @@
 - Renewables are real routes: agriculture → biomass → chemistry.
 - Mobs come only from the GTNA Industrial Slaughterhouse (LV), never from real mob farms.
 - Rare elements come only as by-products of specific lines.
-- Base chemicals have one real route each: GTIA's plants (Bayer and Hall-Héroult for aluminium, Contact, Haber, Ostwald, diaphragm chlor-alkali, Solvay and lime kiln, Kroll, wood retort and still, catalytic dehydration). GTCEu's direct shortcuts to the same products are removed; by-products of other lines stay (D-294).
+- Base chemicals have one real route each: Type Omega's plants (Bayer and Hall-Héroult for aluminium, Contact, Haber, Ostwald, diaphragm chlor-alkali, Solvay and lime kiln, Kroll, wood retort and still, catalytic dehydration). GTCEu's direct shortcuts to the same products are removed; by-products of other lines stay (D-294).
 
 ## Farming
 
-- **Crops (Agronomica):** crop sticks, stats and cross-breeding, inspired by GTNH's CropsNH and Forestry, with GTIA mechanics: NPK soil fed by the chemistry lines, climate controlled in the Greenhouse, pollination by bees, and phytomining (plants that recover metal from mining tailings).
+- **Crops (Agronomica):** crop sticks, stats and cross-breeding, inspired by GTNH's CropsNH and Forestry, with Type Omega mechanics: NPK soil fed by the chemistry lines, climate controlled in the Greenhouse, pollination by bees, and phytomining (plants that recover metal from mining tailings).
 - **Ore boost:** 1 crushed ore + 1 leaf + a tier reagent → 3 purified ore, and the spent reagent goes back to be regenerated. The direct route (9 leaves → 1 dust) exists but is worse.
 - **Bees (Productive Bees, from HV):** base recipes removed; bees live as items inside the Industrial Apiary; combs only open in GregTech machines; new species from IV come from a mutation machine with a guaranteed result.
 - A crop or bee line yields per block about 10–25 % of the same tier's ore line. Its advantage is not needing a vein or a planet.

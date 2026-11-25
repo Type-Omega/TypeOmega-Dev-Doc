@@ -4,7 +4,7 @@ All mods target **Minecraft 1.20.1, Forge 47.4.x, Java 17** and build with Gradl
 
 ```sh
 git clone https://github.com/Type-Omega/TypeOmegaCore.git
-cd GTIACore
+cd TypeOmegaCore
 ./gradlew build
 ./gradlew runGameTestServer -PgtiaDevOptionalDependencies=true
 ```
@@ -16,7 +16,7 @@ cd GTIACore
 | `./gradlew runGameTestServer` | Runs every GameTest headlessly and exits with an error on failure |
 | `./gradlew spotlessApply` | Formats the code |
 
-GTIACore needs GTNA and AE2 at runtime. Without them, pass `-PgtiaDevOptionalDependencies=true` so the test server can start.
+TypeOmegaCore needs GTNA and AE2 at runtime. Without them, pass `-PgtiaDevOptionalDependencies=true` so the test server can start.
 
 ## The modpack
 
@@ -35,4 +35,4 @@ dependencies {
 }
 ```
 
-GTIACore compiles against GTNA from there. To compile against a local GTNA build instead, pass `-PgtnaApiJar=/path/to/gtna.jar`. To publish a new mod, add it to `artifacts.json` in the maven repository.
+TypeOmegaCore compiles against GTNA from there. To compile against a local GTNA build instead, pass `-PgtnaApiJar=/path/to/gtna.jar`. To publish a new mod, add it to `artifacts.json` in the maven repository.

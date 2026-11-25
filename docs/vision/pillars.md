@@ -1,6 +1,6 @@
 # Design pillars
 
-GTIA is GregTech about **building and running megafactories**, on a Kardashev-scale arc: from the first steam machine to planetary, stellar and galactic engineering. It sits between GTNH, GregTech Odyssey and GregTech Leisure: GTNH's power options and detailed tooltips, GTO's fast early game and humour, GTL's clean pack without magic, and none of the free endgame items of GTL's modified editions.
+Type Omega is GregTech about **building and running megafactories**, on a Kardashev-scale arc: from the first steam machine to planetary, stellar and galactic engineering. It sits between GTNH, GregTech Odyssey and GregTech Leisure: GTNH's power options and detailed tooltips, GTO's fast early game and humour, GTL's clean pack without magic, and none of the free endgame items of GTL's modified editions.
 
 ## The ten pillars (D-333)
 
@@ -22,7 +22,7 @@ GTIA is GregTech about **building and running megafactories**, on a Kardashev-sc
 - **Nothing skips a tier.** Shortcuts are same-tier kits and a vending machine, never free endgame items.
 - **Every quest is reachable.** A checker reads the pack's real recipes and fails the build if a quest asks for something you cannot make yet.
 
-## What GTIA does not do
+## What Type Omega does not do
 
 - No magic mods.
 - No research tree, research points or production quotas as gates.

@@ -22,7 +22,7 @@ python3 tools/perf_bench.py my-label --runs 3 --extra DIR_WITH_CANDIDATE_JARS \
 
 Results are appended to `~/MineProjects/GTIA-arquivo/perf/<label>.jsonl`. Profiles use JFR (`--jvm "-XX:StartFlightRecording=..."`).
 
-## Results so far (GTIA, 129–134 mods, dedicated server)
+## Results so far (Type Omega, 129–134 mods, dedicated server)
 
 | Change | Where | Before | After |
 | --- | --- | --- | --- |
