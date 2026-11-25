@@ -6,7 +6,7 @@ All mods target **Minecraft 1.20.1, Forge 47.4.x, Java 17** and build with Gradl
 git clone https://github.com/Type-Omega/TypeOmegaCore.git
 cd TypeOmegaCore
 ./gradlew build
-./gradlew runGameTestServer -PgtiaDevOptionalDependencies=true
+./gradlew runGameTestServer -PtypeOmegaDevOptionalDependencies=true
 ```
 
 | Command | What it does |
@@ -16,7 +16,7 @@ cd TypeOmegaCore
 | `./gradlew runGameTestServer` | Runs every GameTest headlessly and exits with an error on failure |
 | `./gradlew spotlessApply` | Formats the code |
 
-TypeOmegaCore needs GTNA and AE2 at runtime. Without them, pass `-PgtiaDevOptionalDependencies=true` so the test server can start.
+TypeOmegaCore needs GTNA and AE2 at runtime. Without them, pass `-PtypeOmegaDevOptionalDependencies=true` so the test server can start.
 
 ## The modpack
 

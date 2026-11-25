@@ -1,6 +1,6 @@
 # Approved decisions
 
-Product decisions have stable IDs (`GTIA-D-NNN`) that are never reused. Only the pack author approves a decision; a proposal is not a decision because it appears in a document. Revoked decisions keep their ID and are marked as revoked.
+Product decisions have stable IDs (`D-NNN`) that are never reused. Only the pack author approves a decision; a proposal is not a decision because it appears in a document. Revoked decisions keep their ID and are marked as revoked.
 
 Older entries are kept as written and use the project's former names (GT:IA, GTIA, GTIACore, GTIA Lib; now Type Omega, TypeOmegaCore, TypeOmega Lib).
 

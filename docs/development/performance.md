@@ -11,7 +11,7 @@ The pack targets **under 4 GB of RAM** on servers and clients, and Android throu
 | `wall_s` | Seconds from launch until the server is ready |
 | `done_s` | Minecraft's own "Done (…)" time (world preparation) |
 | `heap_after_gc_mb` | Live heap after a forced full GC (class histogram) |
-| `mspt` | Average server tick time while `/gtialib bench` keeps a grid of GT machines running |
+| `mspt` | Average server tick time while `/typeomegalib bench` keeps a grid of GT machines running |
 
 The client side uses `tools/client_bench.py`: it joins a test world on the Prism instance with a given heap limit and records live heap, RSS and out-of-memory errors.
 
