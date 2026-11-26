@@ -18,6 +18,15 @@ cd TypeOmegaCore
 
 TypeOmegaCore needs GTNA and AE2 at runtime. Without them, pass `-PtypeOmegaDevOptionalDependencies=true` so the test server can start.
 
+### Dev runtime flags (`TypeOmegaCore`)
+
+| Flag | What it does |
+| --- | --- |
+| `-PtypeOmegaDevOptionalDependencies=true` | Loads optional pack dependencies (Productive Bees, Ad Astra, AE2 WCWT, AE2 Wireless Terminals) at dev runtime and sets `integration_mandatory=false` |
+| `-PtypeOmegaDevFtbTeams=false` | Disables FTB Teams in dev runtime (loaded by default) to test solo fallback paths |
+| `-PtypeOmegaDevPlaytest=true` | Loads client playtest mods (FTB Chunks, AE2 WCWT, AE2 Wireless Terminals) for `runClient` |
+| `-Ptests=<terms>` | Filters `runGameTestServer` by method, class or batch (`heavy` or `all` for heavy tests; see [GameTests](gametests.md#filtering-gametests)) |
+
 ## The modpack
 
 The pack is managed with packwiz. `manifest/full.lock.json` is the source of truth: `tools/pack.py lock|fetch`, then `tools/packwiz_sync.py`. Quests are generated from `quests-src/` with `tools/questgen.py build` and checked with `tools/questgen.py check`.

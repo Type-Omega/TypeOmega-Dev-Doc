@@ -26,11 +26,15 @@ nav:
       - Pillars: vision/pillars.md
       - Tiers: vision/tiers.md
       - Systems: vision/systems.md
+  - Systems:
+      - AE2: systems/ae2.md
+      - Kardashev Meter: systems/kardashev-meter.md
   - Governance:
       - Decisions: governance/decisions.md
       - Releases: governance/releases.md
   - Development:
       - Setup: development/setup.md
+      - TypeOmega Lib: development/typeomega-lib.md
       - Code conventions: development/conventions.md
       - GameTests: development/gametests.md
       - Performance: development/performance.md
