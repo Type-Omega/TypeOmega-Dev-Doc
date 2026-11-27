@@ -1,0 +1,1944 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Vision, governance and development guides for Type Omega">
+      
+      
+      
+        <link rel="canonical" href="https://type-omega.github.io/TypeOmega-Dev-Doc/governance/decisions/">
+      
+      
+        <link rel="prev" href="../../systems/kardashev-meter/">
+      
+      
+        <link rel="next" href="../releases/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>Decisions - Type Omega Dev Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#approved-decisions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Type Omega Dev Docs" class="md-header__button md-logo" aria-label="Type Omega Dev Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Type Omega Dev Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Decisions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Type-Omega/TypeOmega-Dev-Doc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Type-Omega/TypeOmega-Dev-Doc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../vision/pillars/" class="md-tabs__link">
+          
+  
+  
+  Vision
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../systems/ae2/" class="md-tabs__link">
+          
+  
+  
+  Systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Governance
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/setup/" class="md-tabs__link">
+          
+  
+  
+  Development
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Type Omega Dev Docs" class="md-nav__button md-logo" aria-label="Type Omega Dev Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Type Omega Dev Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Type-Omega/TypeOmega-Dev-Doc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Type-Omega/TypeOmega-Dev-Doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Vision
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vision/pillars/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pillars
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vision/tiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tiers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vision/systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systems
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Systems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/ae2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AE2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/kardashev-meter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kardashev Meter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Governance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decisions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decisions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gto-rules-left-out-of-gtia-rules-d-280" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GTO Rules left out of GTIA Rules (D-280)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Releases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/typeomega-lib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TypeOmega Lib
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/conventions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code conventions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/gametests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GameTests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gto-rules-left-out-of-gtia-rules-d-280" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GTO Rules left out of GTIA Rules (D-280)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="approved-decisions">Approved decisions</h1>
+<p>Product decisions have stable IDs (<code>D-NNN</code>) that are never reused. Only the pack author approves a decision; a proposal is not a decision because it appears in a document. Revoked decisions keep their ID and are marked as revoked.</p>
+<p>Older entries are kept as written and use the project's former names (GT:IA, GTIA, GTIACore, GTIA Lib; now Type Omega, TypeOmegaCore, TypeOmega Lib).</p>
+<p>This page lists the approved product decisions that shape development. Internal drafts, audits and studies are not published.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D-141</td>
+<td>Greenhouse and Pyrolyse Oven arrive early in MV. The Greenhouse is optional and starts sun-dependent; the Pyrolyse Oven is strongly recommended but does not gate HV.</td>
+</tr>
+<tr>
+<td>D-221</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> Vertical, generated quest book (<code>questgen.py</code>) with chapters per tier, fixed meaning for side lanes and shapes per role, and automatic checks.</td>
+</tr>
+<tr>
+<td>D-226</td>
+<td>No research tree. The pack is about building and running megafactories.</td>
+</tr>
+<tr>
+<td>D-227</td>
+<td>Megafactory in depth and width. In the first 20 hours, new machines every session. 1–2 rebuilds per tier. The factory goes wherever the player wants.</td>
+</tr>
+<tr>
+<td>D-228</td>
+<td>Processing lines grow with the tier (Steam 2–3, LV/MV 4–6, HV/EV 6–10, IV+ 10+), with by-products, closed loops, waste treatment and branching mid-line.</td>
+</tr>
+<tr>
+<td>D-229</td>
+<td>Real chemistry without requiring a PhD, in the order Steam wood/coal and lime → LV chlor-alkali and steel → LV/MV Bayer + Hall-Héroult → MV Contact, Haber-Bosch + Ostwald, Solvay → HV refining.</td>
+</tr>
+<tr>
+<td>D-230</td>
+<td>Resources: wells with purity, infinite sources per tier, planetary gases, renewables as real routes, mobs only from the Slaughterhouse, rare elements only as by-products.</td>
+</tr>
+<tr>
+<td>D-231</td>
+<td>Energy: real fuel lines, heat as a resource, chemical and thermal storage, losses on wireless energy.</td>
+</tr>
+<tr>
+<td>D-232</td>
+<td><strong>Superseded by D-340.</strong> Logistics: no throughput limits, AE2 storage at the end of LV and autocrafting in MV, no Create.</td>
+</tr>
+<tr>
+<td>D-233</td>
+<td>Multiblocks: upgrades by parts, Mega for everything, no limit, parallelism explained with numbers, modules through hatches and the GTNA module system, no luck-based progression.</td>
+</tr>
+<tr>
+<td>D-234</td>
+<td>Danger: GTCEu explosions and hazards, cleanrooms, inert atmospheres, safety gear.</td>
+</tr>
+<tr>
+<td>D-237</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> Grind is solved with more factory. Own recipes for key items plus automatic shortcut checks. Modes chosen at world creation and locked.</td>
+</tr>
+<tr>
+<td>D-238</td>
+<td>Chosen unique ideas: process conditions, two routes per molecule, closed loops, wells with purity, heat as a resource, factory dimension, planetary gases, rare elements only as by-products.</td>
+</tr>
+<tr>
+<td>D-244</td>
+<td>Standard multiblock tooltips in the GTNA format: a real fact, then Main Function, Auxiliary Module and Running Requirements.</td>
+</tr>
+<tr>
+<td>D-246</td>
+<td>Better versions of the real-chemistry multiblocks (rotary kiln, membrane cell…) come from IV/LuV onwards.</td>
+</tr>
+<tr>
+<td>D-254, D-256</td>
+<td>GTIA Rules: Journey, Normal and Custom presets; 44 rules in 7 groups; rules never change registries.</td>
+</tr>
+<tr>
+<td>D-257</td>
+<td>Crafting Chain (separate mod) replaces Fabricate.</td>
+</tr>
+<tr>
+<td>D-259</td>
+<td>Bees arrive in HV through Productive Bees with its base recipes removed.</td>
+</tr>
+<tr>
+<td>D-260</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> Agronomica: our own crop mod, separate repository, LGPL-3.0.</td>
+</tr>
+<tr>
+<td>D-261</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> Ore boost with a reagent: 1 crushed + 1 leaf + reagent → 3 purified.</td>
+</tr>
+<tr>
+<td>D-262</td>
+<td>GTIA Lib is the org's foundation library (depends on GTCEu); GTNA, GTIACore and Agronomica require it. GTOLib ideas are reimplemented from scratch, never copied.</td>
+</tr>
+<tr>
+<td>D-263</td>
+<td>Ascension Optimizer (<code>ascopt</code>, no GT dependency): spawn chunks 441 → 25; server ready in 31 s instead of 47 s.</td>
+</tr>
+<tr>
+<td>D-264</td>
+<td>Client uses ModernFix <code>dynamic_resources</code>; LeanObject is server-only (menu heap −37 %).</td>
+</tr>
+<tr>
+<td>D-265</td>
+<td>EMI multiblock previews built on demand and GTNA shape cache in SoftReference: EMI reload 20.6 → 12.2 s, client runs with 1.5 GB.</td>
+</tr>
+<tr>
+<td>D-266</td>
+<td>Draconium belongs to GTNA only; GTIACore's copy was removed.</td>
+</tr>
+<tr>
+<td>D-267</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> Agronomica core: crop sticks, four Steam/LV crops, Growth/Gain/Resistance (soft cap above 20), cross-breeding with mutations, NPK soil and fertilisers.</td>
+</tr>
+<tr>
+<td>D-268</td>
+<td>HV bee line: all Productive Bees recipes and nests disabled; caged metal bees come from the Chemical Reactor, the Industrial Apiary (HV–UV) makes combs, combs give a small dust or, with HCl, purified ore.</td>
+</tr>
+<tr>
+<td>D-269</td>
+<td>Recommended client flags: G1 periodic GC with free ratios 10–30 % and <code>MALLOC_ARENA_MAX=2</code>; client RSS 6.0 → 4.4 GB with the same live heap.</td>
+</tr>
+<tr>
+<td>D-270</td>
+<td>No batched <code>@Synced</code> for now: a player next to 500 working LV furnaces receives about 1.3 KB/s; LDLib sync is not a network bottleneck.</td>
+</tr>
+<tr>
+<td>D-275</td>
+<td>HV quest chapter v6 approved: every dependency has a recipe reason checked against a GTNH 2.9 / GTO 0.6 quest atlas; tier machines are side quests unless a goal needs them; the circuit ladder (HV → EV → IV) lives inside the tier; the EV circuit comes right after the Cleanroom because HV multiblocks need it.</td>
+</tr>
+<tr>
+<td>D-276</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> Start–MV quest chapters v7 in game, built like HV v6: recipe reason on every dependency, tier motor and turbine as central hubs, LV motor before the LV turbine, separate components, MV PVC board and CPU chip line, HV gets an HV steam turbine. Hidden lines use FTB's per-quest flags on either side; crossings and long lines are notes in <code>questgen check</code>.</td>
+</tr>
+<tr>
+<td>D-277</td>
+<td>Rocket Assembler (HV): 15 × 15 × 20 launch complex (twin stepped service towers, scaffold, umbilicals, crane bridge, flame trench), own casing with LDLib connected textures; the tier 1 rocket and its Ad Astra parts are made through GT and Ad Astra's own recipes for them are dropped.</td>
+</tr>
+<tr>
+<td>D-278</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> Mode-only quests: GTIACore tags the player <code>gtia_journey</code> or <code>gtia_normal</code> from the world preset (Custom counts as Normal); a hidden <code>modes</code> chapter turns the tag into an FTB Quests stage, and quests marked with a mode stay hidden in the other one. The Start chapter's strong tool rewards become the Journey Starting Kit; Normal gets steel tools and an LV prospector.</td>
+</tr>
+<tr>
+<td>D-279</td>
+<td>Organ system ported from GTO 0.6 into GTIACore: 9 organ types × tiers 0–4, steel/fairy/mechanical wings, Organ Modifier screen (9 organ + 8 wing slots), organs kept in persisted player data. Effects as in GTO (leg speed scaled to +10/30/60/100 %, +5 armor and toughness per set tier, +4 reach, liver and lung perks, no hunger at set 3, flight at set 4). Ad Astra planets hurt players below set tier (t−1)/2+1 (Moon and Mars: 1). GTO assembler recipes; phantom membranes replace Botania in the cheap wings. GTO's "nano wall" is left out (GTOLib only).</td>
+</tr>
+<tr>
+<td>D-280</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> GTIA Rules grow from 44 to 52 for parity with GTO Rules: rubber tree chance, infinite bedrock fluids, require GT tools (restart), material hazards, extra regeneration (food threshold and strength), planets need organs, organ cost. GTO rules without a GTIA mechanic stay out (see the table below).</td>
+</tr>
+<tr>
+<td>D-281</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> MV/HV chemistry lines: Ostwald Converter (MV, cobalt oxide gauze; HV platinum gauze), Claus Unit, Kroll Reactor and Siemens Reactor (HV), Czochralski boule from 16 polysilicon in the EBF. Real stoichiometry and closed loops (NO, Mg/Cl₂, HCl).</td>
+</tr>
+<tr>
+<td>D-282</td>
+<td>Main menu with FancyMenu 3.9.12 (Konkrete, Melody) instead of PackMenu: animated emblem plus the author's text logo recoloured in purple, animated pixel-art space-factory background, buttons Singleplayer, Multiplayer, Mods, Settings, Quit and Discord.</td>
+</tr>
+<tr>
+<td>D-283</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> Quest book highlight images: isometric renders of 19 multiblocks from the real textures (<code>modpack/tools/iso_render.py</code>). The Moon quest is a dimension task and the reachability model knows Ad Astra's own Moon blocks, so no lunar quest is pending.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gto-rules-left-out-of-gtia-rules-d-280">GTO Rules left out of GTIA Rules (D-280)</h3>
+<table>
+<thead>
+<tr>
+<th>GTO rule</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recipe / mod recipe / ore processing difficulty, fluid resource difficulty, tech tree difficulty</td>
+<td>GTO-specific recipe sets; GTIA has one recipe set per pack, tuned by the recipe rules</td>
+</tr>
+<tr>
+<td>Scan duration, repeated scan factor, energy data hatch warm-up</td>
+<td>No research tree (D-226)</td>
+</tr>
+<tr>
+<td>Space elevator, ME hatch energy, ME simple pattern buffer, ME muffler amplifier, virtual coin</td>
+<td>Machines that only exist in GTO</td>
+</tr>
+<tr>
+<td>Generator array, wind turbine, magic generator, mega turbine, flow fuel cell, bio stimulation, wireless energy tower, lightning rod</td>
+<td>Generators that only exist in GTO</td>
+</tr>
+<tr>
+<td>Large steam circuit assembler, large solar boiler, large steam storage tank, dual chamber</td>
+<td>Steam machines that only exist in GTO; GTIA's steam rules cover the GTNA steam multiblocks</td>
+</tr>
+<tr>
+<td>Fluid pipe throughput, maintenance wear rate, random maintenance failures, configurable maintenance bounds, parallel hatch tier bonus, processing plant parallels, field generator amount, time twister, shut down on power loss, generators burn fuel when full, reset progress on low energy</td>
+<td>No setting in GTCEu 7.5.3 to drive them</td>
+</tr>
+<tr>
+<td>Tiered casings</td>
+<td>Kept off in both presets by an earlier pack decision</td>
+</tr>
+<tr>
+<td>Mob enhancement</td>
+<td>No mob changes in GTIA</td>
+</tr>
+<tr>
+<td>Circuit assembly line component amount</td>
+<td>No circuit assembly line in GTIA</td>
+</tr>
+<tr>
+<td>D-284</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> GTIA's own chemistry rules (54 rules in all): catalyst wear (Normal: 1 % chance per run that the Ostwald/Claus catalyst wears out; Journey: never) and heat recovery (Journey: 1.5× the steam of the chemistry plants). Organ textures redrawn; Organ Modifier screen shows the slots on a body outline with an effect readout. Main menu: one row of four textured buttons (Singleplayer, Multiplayer, Settings, Quit) and a Discord icon.</td>
+</tr>
+<tr>
+<td>D-285</td>
+<td>The Android <code>.mrpack</code> ships from 0.1.0-dev-5: Modrinth links where the exact file exists, every CurseForge-only jar inside the pack with the author's permission (owners informed; removed at once on request). Built locally with <code>tools/mrpack.py</code> and attached to the release.</td>
+</tr>
+<tr>
+<td>D-286</td>
+<td>Space age direction: the station lives in Ad Astra's orbit, starts in HV and is modular (a core plus connectors and modules that grow the station, with GTIA-only modules); the extreme-gravity destination is an Ad Astra planet (datapack). Three community stations (ABFielder "Space Station fiop", Toppat Orbital Station, Icarus), cleared for use by the author, replace Ad Astra's default station structures with GTNA ABS casings and Ad Astra plating, doors and lamps. Fouling and vein purity rules are approved.</td>
+</tr>
+<tr>
+<td>D-287</td>
+<td>Quest book layout in the GTNH way: <code>tools/quest_layout.py</code> places Steam, LV, MV, HV, Agriculture and Bees in dependency columns ordered to minimise crossings, with leaf quests in a ring around the quest they hang from and large collections as a grid block; tier-wide hubs (7+ dependents) do not place quests and their lines are hidden; long lines, lines over a quest and lines crossing twice per line are hidden. Every dependency stays (reachability). Visible crossings: Steam 102 → 5, LV 78 → 4, MV 35 → 6, HV 31 → 4. Book theme: opaque dark background, thick red/green lines. Era banners as chapter images.</td>
+</tr>
+<tr>
+<td>D-288</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> Creating a world whose preset changes a startup rule asks for a restart first, like GTO's difficulty: "Save and Quit" writes the rules, closes the game and keeps the choice for the next create-world screen. Opening a saved world with other startup values asks too (Save and Quit / Play anyway).</td>
+</tr>
+<tr>
+<td>D-289</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> Agriculture (21 quests) and Bees (13 quests) chapters in the Systems group. New recipes for the empty Bee Cage, the Honey Treat (Mixer) and the Greenhouse controller, which had none; a GameTest now checks that every GTIA machine has a recipe.</td>
+</tr>
+<tr>
+<td>D-290</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> Mode quests are visible from the start in worlds of their mode: the Starting Kits complete with their Start step's task, and one opening quest per mode explains what it changes.</td>
+</tr>
+<tr>
+<td>D-291</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> The Start splits GTO-style into <strong>Welcome</strong> (reading, the world's mode, rules, community, EMI and Crafting Chain tips) and a <strong>step-by-step Start</strong> that snakes from the first log to the first Coke, with tips next to the steps that need them; the author's 29 quests keep ids, text, tasks and rewards. Steam supplies become per-mode kits. Tips in LV, MV and HV. <strong>Multiblock Goals</strong> chapter after GTNH's: all 254 multiblocks in a grid, columns by family, rows by the voltage their controller recipe needs, text from each mod's own tooltip.</td>
+</tr>
+<tr>
+<td>D-292</td>
+<td>Multiblock renders leave the quest map and quest text (EMI's preview stays, press R); the era banner sits in the free space nearest the chapter's entry quest.</td>
+</tr>
+<tr>
+<td>D-293</td>
+<td>Steam, LV, MV and HV take the <strong>GTNH 2.9 chapter structure</strong>: a quest with a GTNH equivalent goes to its place, GTIA-only quests sit next to the quest they depend on, no quests added; dependencies thinned by the reachability check to 1–2 per quest. Every chapter has its own low-contrast pixel-art background tile: Steam bronze, LV grey, MV blue, HV light steel, EV light purple, IV dark blue; Welcome dark brick, Start stone, Agriculture farmland, Bees honeycomb, Energy coils, Wireless circuit traces, reference chapters a neutral grid.</td>
+</tr>
+<tr>
+<td>D-294</td>
+<td><strong>Partly revised by D-345</strong> (Pyrolyse Oven log recipes are back). <strong>No competing chemistry routes.</strong> 47 GTCEu/GTNA direct syntheses that skipped GTIA's chemistry lines are removed in both modes: aluminium (bauxite, sapphire, kyanite, clay and aluminium sulfite electrolysis; the bauxite sludge chain), sulfuric acid, ammonia, nitric acid, membrane-less chlor-alkali, soda ash, titanium tetrachloride and its reduction outside the Kroll Reactor, quicklime, chemical ethylene (cracking stays) and log pyrolysis. By-products (ores, distillation, recycling, silicate decomposition) stay. The GTCEu silicon boule stays because the HV Siemens Reactor needs HV circuits, which need wafers. Quests that relied on the old routes now point to GTIA's plants.</td>
+</tr>
+<tr>
+<td>D-295</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> Each Multiblock Goals quest gives a small pack of its row's metal (4 bronze, steel, aluminium, stainless steel, titanium or tungstensteel ingots; 2 of the LuV–UV metal; 1 neutronium), checked by the reachability tool.</td>
+</tr>
+<tr>
+<td>D-296</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> Steam, LV, MV and HV go back to the v7 layout (each quest's own x/y) until the new GTNH layout is approved: the D-293 layout hid the lines of 36–58% of the quests in each chapter and left 15–29 quests per chapter with no line at all.</td>
+</tr>
+<tr>
+<td>D-297</td>
+<td>The GTNH layout is redone by the generator around GTNH's hubs: checked GTIA↔GTNH pairs; where a GTIA quest takes a GTNH hub, the quests under it depend on it (implied dependencies only); a GTNH hub with no GTIA pair becomes a GTIA milestone quest (imported or checkmark); the GTNH grid is compacted; GTIA-only quests branch in straight rows; quests move before lines are hidden; sizes 1/2/3. Targets: no quest without a line, at most 10% with hidden lines, no overlaps or lines over quests.</td>
+</tr>
+<tr>
+<td>D-298</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> Work moves to mechanics, processing lines and performance; the quest book comes last, before the public release. Changes target critical, specific points: GTCEu machines and multiblocks stay and get recipes with new materials, and a new machine is added only when no existing one can do the step. Alternative routes follow GTNH's model (for example three routes to aluminium ingots).</td>
+</tr>
+<tr>
+<td>D-299</td>
+<td><strong>Revoked by D-334.</strong> Nothing from GTNA or GTIA is removed (lines, recipe types, machines). Late GTNA machines are gated by their controller recipe: the Integrated Ore Processor around IV/LuV, the PCB Factory after LuV.</td>
+</tr>
+<tr>
+<td>D-300</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> Reusable machines and mechanics live in GTIACore (revises part of D-206).</td>
+</tr>
+<tr>
+<td>D-301</td>
+<td>Multiblock structures are proposed by the assistant at the level of detail of GTNA's structures and approved by the author, starting with the Wood Retort, Lime Kiln and Diaphragm Cell.</td>
+</tr>
+<tr>
+<td>D-302</td>
+<td><strong>Superseded by D-335</strong> (machines become recipes; structures archived). Chemistry slice 01 structures replace the D-251 boxes: Wood Retort as a brick bench with a wrought-iron retort, condenser and decanter (12×12×8); Lime Kiln as a banded shaft kiln with a hoist tower (7×14×5); Diaphragm Cell as a row of 3 to 9 Hooker cells, one parallel per cell, still limited by energy.</td>
+</tr>
+<tr>
+<td>D-303</td>
+<td>The Integrated Ore Processor controller moves from the EV Assembler to the IV Assembly Line (7,680 EU/t).</td>
+</tr>
+<tr>
+<td>D-304</td>
+<td>GTNH-style electrolyzer: 26 silicate and clay decompositions cost MV, 18 give Alumina instead of Aluminium (for the Hall-Héroult Cell), bastnasite gives Rare Earth instead of cerium; recycling and source ores stay.</td>
+</tr>
+<tr>
+<td>D-305</td>
+<td>Dust-to-fluid extraction is removed for 13 EBF-only materials (Extractor and Liquefaction Furnace); parts and ingots still melt. Greenhouses, Tree Growth Simulator and Atomization stay as they are.</td>
+</tr>
+<tr>
+<td>D-306</td>
+<td>Pig iron steelmaking with existing machines: PBF/EBF make Pig Iron and Slag from hematite or magnetite, coke and calcite; the LV Arc Furnace turns pig iron and oxygen into steel; slag replaces stone dust in concrete.</td>
+</tr>
+<tr>
+<td>D-307</td>
+<td>Air separation stays as it is (LV Centrifuge, Vacuum Freezer, Distillation Tower).</td>
+</tr>
+<tr>
+<td>D-308</td>
+<td>Three aluminium routes: dust in the EBF at HV (480 EU/t); dust pressed into Crude Aluminium and melted at MV, slowly; alumina and carbon in the EBF at MV, at half the Hall-Héroult yield.</td>
+</tr>
+<tr>
+<td>D-309</td>
+<td>Naquadah reactor ladder in GTNA: the Large Naquadah Reactor (ported from GregTech Odyssey, UHV) and the Naquadah Hyper Reactor (GTNA original, UEV, four times the EU per mB, oxygen or nitrogen plasma boosters). GTNA adds Naquadah Fuel and Enriched Naquadah Fuel with simple default recipes; GT:IA will replace the fuel chain later.</td>
+</tr>
+<tr>
+<td>D-310</td>
+<td><strong>Revoked by D-399 (Type Omega).</strong> Veins with purity and the Entangled Miner: GTCEu bedrock ore veins return as a passive, infinite source from LV, each vein rolled impure ×1, normal ×2 or pure ×4. A Vein Card records a vein; the Entangled Miner (GTIACore single block, LV to IV) mines it remotely, 8 s per operation at 30 EU/t with normal overclocking (LV normal 900 raw ores per hour; IV pure 8 per second). At most 4 miners per vein; same dimension until HV, any dimension from EV. The GTCEu Bedrock Ore Miner is removed. Revises D-117.</td>
+</tr>
+<tr>
+<td>D-311</td>
+<td><strong>Frozen by D-333.</strong> First megastructure: the Matrioshka Brain, in GTIACore. Up to five computing shells around a star in its own dimension (the Nexus System, an Ad Astra planet; without Ad Astra the machine is absent), formed only there. Landauer physics: colder shells compute more, an overheated shell stops. Produces CWU (2^22 to 2^26 CWU/t) and a new resource, Ψ (thought cycles). Own 3D model, converted to a GTCEu pattern.</td>
+</tr>
+<tr>
+<td>D-312</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> <strong>Frozen by D-333.</strong> Eras beyond MAX, in GTIACore: voltage stops at MAX; each new tier is an era with its own condition, a non-EU resource and a megastructure that opens it, as a separate axis from voltage. Draft eras: Ψ (Matrioshka Brain), Stellar, Dimensional, Causal, Final, each with levels I to III. First delivery: the Matrioshka Brain and Era Ψ. How the game ends is up to the modpack.</td>
+</tr>
+<tr>
+<td>D-333</td>
+<td><strong>Revoked by D-397 (Type Omega).</strong> Restructuring. GTIA follows ten pillars (see Design pillars). Megastructures, the eras beyond MAX and the VFX engine are <strong>frozen</strong>: the code stays, no new work until HV has been played. Next playable target: <strong>Start → MV played and fixed</strong>, including MV AE2.</td>
+</tr>
+<tr>
+<td>D-334</td>
+<td>Revokes D-299: GTIA and GTNA content can be cut or merged through the restructuring inventory.</td>
+</tr>
+<tr>
+<td>D-335</td>
+<td><strong>No custom chemistry multiblocks from Steam to HV.</strong> Wood Retort, Lime Kiln, Diaphragm Cell, Bayer, Hall-Héroult, Contact, Haber-Bosch, Solvay, Ostwald, Claus, Kroll and Siemens are removed; the real chemistry stays as recipes in GTCEu/GTNA machines (Coke Oven, Electrolyzer, Large Chemical Reactor, Autoclave, EBF). A new multiblock only when strongly needed (like GTO's Sintering Furnace). Approved structures are archived for IV+ Mega versions. The D-294 removals stay. The Rocket Assembler stays.</td>
+</tr>
+<tr>
+<td>D-336</td>
+<td>Fermentation Vat (12 tiers), Catalytic Dehydrator and Still are removed; their recipes move to the GTCEu Fermenter, Chemical Reactor and Distillery.</td>
+</tr>
+<tr>
+<td>D-337</td>
+<td>One Greenhouse: GTNA's (plus the Large Greenhouse), with Agronomica recipes.</td>
+</tr>
+<tr>
+<td>D-338</td>
+<td>Survival stays out of the way: organs are an optional bonus with no Moon/Mars gate; vanilla hunger, no food mods; the End opens in EV with one recipe (no End Data per eye); GTNA Steam Elevator survival modules are conveniences only.</td>
+</tr>
+<tr>
+<td>D-339</td>
+<td><strong>Revoked by D-399 (Type Omega).</strong> Mining and building: a Fortune pickaxe in the starting kit, FTB Ultimine from the start, the personal dimension (ModernSpace) in Steam, the Entangled Miner stays in LV.</td>
+</tr>
+<tr>
+<td>D-340</td>
+<td><strong>Revoked by D-401 (Type Omega).</strong> AE2 storage and first automation in MV; HV refinement unlocks parts such as ExtendedAE's Assembler Matrix. Wireless energy: Flux Matrix with losses in HV, full wireless in EV. GTNA wireless steam only in Journey; Normal uses pipes.</td>
+</tr>
+<tr>
+<td>D-341</td>
+<td>New EV power: fission reactor (GTNH/GTO port), nitrobenzene and high-octane fuels in the Large Combustion Engine, Large Gas Turbine on refinery gas.</td>
+</tr>
+<tr>
+<td>D-342</td>
+<td>Space: Ad Astra planets up to EV with adjusted resources, GTIA's own planets from IV. One visit per destination, then everything by data (Void Miner, fluids). Zero gravity stays required in EV; a Cleanroom-like multiblock simulates it on the ground.</td>
+</tr>
+<tr>
+<td>D-343</td>
+<td>Identity: eras named after the Kardashev scale; detailed GTNH-style multiblock tooltips plus one GTO-style joke line; nothing that skips a tier, shortcuts only as same-tier kits plus a GTNH-style vending machine; the GTIA Rules stay (revoked by D-436).</td>
+</tr>
+<tr>
+<td>D-344</td>
+<td>Cleanup: old internal docs are deleted; GTNA is fully reorganised and optimised, trilingual comments that repeat the code are removed, and content GTIA does not use is hidden by pack config.</td>
+</tr>
+<tr>
+<td>D-345</td>
+<td>The Pyrolyse Oven log recipes come back as the efficient MV wood route; the Coke Oven wood recipe stays the Steam one and replaces GTCEu's log to charcoal.</td>
+</tr>
+<tr>
+<td>D-346</td>
+<td>Branches reach main only after the author tests the new chemistry in the client.</td>
+</tr>
+<tr>
+<td>D-347</td>
+<td>The personal dimension portal is the reward of a Steam quest, with no crafting recipe.</td>
+</tr>
+<tr>
+<td>D-348</td>
+<td><strong>Revoked by D-399 (Type Omega).</strong> Starting mining kit: a Mining Hammer and a steel GregTech pickaxe with Fortune III, Unbreaking III and Efficiency III, in a Mining Kit quest for both modes. Fortune works on GregTech ores with the vanilla ore formula, the same in both modes.</td>
+</tr>
+<tr>
+<td>D-349</td>
+<td>AE2 in MV, GTO-style: drives, controller, terminals and autocrafting in the MV Assembler with MV circuits, processors in the MV Laser Engraver. HV unlocks ExtendedAE's Assembler Matrix, crafting CPUs above 4k, extended pattern providers and interfaces, wireless terminals and P2P.</td>
+</tr>
+<tr>
+<td>D-350</td>
+<td><strong>Revoked by D-401 (Type Omega).</strong> Flux Matrix in HV: stainless steel and HV circuits, 3% loss in HV; no loss and cross-dimension network from EV. LV/MV wireless hatches stay but need the Flux Matrix.</td>
+</tr>
+<tr>
+<td>D-351</td>
+<td>The Wireless chapter is redone with the quest atlas method after Start → MV.</td>
+</tr>
+<tr>
+<td>D-352</td>
+<td>The Eye of Ender only comes from an HV Assembler recipe (HV emitters and sensors use it); the End opens in HV.</td>
+</tr>
+<tr>
+<td>D-353</td>
+<td>Direction: merge GTL Enhanced 3.1 and GTO 0.6.0-dev27 into GT:IA. From GTL: World Fragments with a Collector, a steam Void Ore multiblock, massive processing multiblocks from LV/MV, a short Steam age. From GTO: performance and processing lines by tier. Everything is ported into GTIACore/GTNA (GTL's jars target GTCEu 1.4.4). Legacy leaves the book and the recipes; code is hidden by config. Start → MV first.</td>
+</tr>
+<tr>
+<td>D-354</td>
+<td><strong>Revoked by D-404 (Type Omega).</strong> Space has two paths: a planet's World Fragment comes from one visit or from a probe/satellite, the player's choice. The first (Overworld) fragment is a quest reward after the Entangled Miner or the steam Void Ore. The Rocket Assembler stays: launching the T1 gives the Moon fragment.</td>
+</tr>
+<tr>
+<td>D-355</td>
+<td><strong>Revoked by D-399 (Type Omega).</strong> Mining: steam Void Ore in Steam (slow brick multiblock); Fragment Collector in LV (Large in HV); the Entangled Miner stays as the data source (vein card) that feeds the Collector. Roadmap items GTIA-14 and GTIA-15 are absorbed by the Collector.</td>
+</tr>
+<tr>
+<td>D-356</td>
+<td>World: Overworld plus Void World and Super Flat by cheap teleport in Steam, plus ModernSpace. No skyblock mode. Industrial Platform gets a Steam quest and a cheap recipe.</td>
+</tr>
+<tr>
+<td>D-357</td>
+<td>Massive processing multiblocks from LV on. D-335 now covers chemistry only. Structures are rebuilt with the skill's scale-by-tier table, and each one is approved only after a side-by-side artifact comparing the original (GTL/GTO) with the new version.</td>
+</tr>
+<tr>
+<td>D-358</td>
+<td>Port tiers follow GTL Enhanced: Large Furnace LV; Ore Processing Plant and Processing/Mixing/Separating/Assembling Plus MV; Cracker, Distillation Tower, LCR, Vacuum Freezer, Implosion HV; Platinum Refining Matrix and Large Fragment Collector EV; Universal Joint Factory EV (stronger than GTL's); Assembly Line, Large Pyrolyse, Large Extractor IV; Large Cracker and fusion LuV; Petrochemical Plant, Integrated Ore Processor, Large Void Miner, Mega BF/ABS, Void-Constrained Mining Field ZPM; Large Chemical Plant and processing Megas UHV; Hydrothermal Leaching Complex UEV.</td>
+</tr>
+<tr>
+<td>D-359</td>
+<td>GTO ports: all families (ore processing, petrochemistry, manufacturing, energy, space by data, Steam multiblocks), by tier, after the GTNA × gtocore audit. No GTO-specific machines whose meaning depends on GTO's own recipes (e.g. the Laser Welder).</td>
+</tr>
+<tr>
+<td>D-360</td>
+<td><strong>Revoked by D-405 (Type Omega).</strong> Short Steam age like GTL: an AE package and a fragile tool to jump to MV; basic AE2 arrives at the end of Steam (the rest of D-349 stands). Start → MV chapters are rewritten after these decisions.</td>
+</tr>
+<tr>
+<td>D-361</td>
+<td><strong>Revoked by D-399 (Type Omega).</strong> Steam Void Ore: reuse GTNA's <code>void_miner_steam_gate_aged</code> with the new "portal house" structure (9×15×9); outputs the 4 starter veins (iron, copper, tin, coal) at 1 800 ores/hour.</td>
+</tr>
+<tr>
+<td>D-362</td>
+<td><strong>Revoked by D-399 (Type Omega).</strong> LV Fragment Collector: "survey tower" structure (7×13×7). Fragment alone = random vein; fragment + Vein Card = precise vein with the card's purity. Fragment not consumed, with a chance to duplicate (as in GTL). 4 operations per cycle.</td>
+</tr>
+<tr>
+<td>D-363</td>
+<td><strong>Revoked by D-399 (Type Omega).</strong> EV Large Fragment Collector: new GTIACore machine, "drilling platform" structure (13×18×13); GTNA's Electric Void Miner hidden by config. 16 parallel at EV, Parallel Hatch from IV (D-162). Void World and Super Flat via two preconfigured ModernSpace portals in the Steam quest.</td>
+</tr>
+<tr>
+<td>D-364</td>
+<td>Revises D-363: no preconfigured portals. The Steam quest gives 2 plain ModernSpace portals and the player picks the preset (Void, Super Flat or other) in the editor. ModernSpace is unchanged.</td>
+</tr>
+<tr>
+<td>D-365</td>
+<td>Large Furnace (LV): "furnace hall" structure (15×14×9); parallel and concurrent recipes as in GTL (GTL base values at LV, doubling per tier, 1 Parallel Hatch).</td>
+</tr>
+<tr>
+<td>D-366</td>
+<td>Ore Processing Plant (MV): "beneficiation line" structure (13×9×9); raw ore to final products in one step, 64 parallel at MV, +100 per tier, as in GTL.</td>
+</tr>
+<tr>
+<td>D-367</td>
+<td>Plus factories (MV): one shared hall (11×8×9) with a per-family core module; parallel as in GTL (16 at LV, doubling, 256 from IV). Mixing Plus ships whole, chemical reactor and bath included: an explicit exception to D-335. GTNA's Universal Factory stays one tier above as the all-families version.</td>
+</tr>
+<tr>
+<td>D-368</td>
+<td>Multiblock style follows GTL Enhanced: palette 40/25/15/10 plus 10% detail in 6–10 block types (replaces 60/20/10/10); from HV on every structure uses at least 4 of 6 traits (chamfer, ribbing, repeated module, external piping, accent band, feet); scale a bit above GTL-E per tier; megas (IV+) ship a base and a ~3× hand-drawn enlarged version; the F3 designs are redrawn with these traits before implementation.</td>
+</tr>
+<tr>
+<td>D-369</td>
+<td>Final F3 shapes: Large Furnace uses version C (20×17×11, GTL-E traits) instead of D-365's B; Ore Processing Plant keeps B (13×9×9); Plus factories use hall C (15×11×11) instead of D-367's B. Parallel and processing rules of D-365–D-367 stand.</td>
+</tr>
+<tr>
+<td>D-370</td>
+<td><strong>Relaunch as Type Omega.</strong> The modpack restarts from scratch under the name Type Omega: no survival, no magic, exploration only in space. Carried over: GT:IA's own chemistry lines, the proposed megastructures and all of GTNA; Agronomica undecided. GT:IA campaign decisions are on hold until reviewed one by one.</td>
+</tr>
+<tr>
+<td>D-371</td>
+<td>Chapters follow an extended Kardashev scale: Type 0, I, II, III, IV and Ω, with sub-chapters named by decimal plus milestone (e.g. "0.7 · Power Grid"). Initial map: 0 = Steam–HV, I = EV–LuV, II = ZPM–UHV, III = UEV–UXV, IV = OpV–MAX, Ω = post-MAX. A short primitive age comes before steam.</td>
+</tr>
+<tr>
+<td>D-372</td>
+<td>Kardashev meter: <code>K = min(log4(EU/t ÷ 8) ÷ 3.5, type + 0.99)</code>, EU/t being the team's 10-minute average of all EU generation. Only the decimal can drop; an earned type stays. Shown on a meter block/multiblock and an optional HUD. The 3.5 constant is tuned from real bases.</td>
+</tr>
+<tr>
+<td>D-373</td>
+<td>Three megastructures per chapter in sequence; each raises the K ceiling and the last closes the type: Type 0 → fusion reactor, I → Dyson sphere, II → Kugelblitz, III → QSO, IV → create a new universe. Reaching a new body opens a chapter. Civilization titles per type are announced in chat/HUD.</td>
+</tr>
+<tr>
+<td>D-374</td>
+<td>Minecraft 1.20.1 + GTCEu Modern; planets from an existing space mod, galaxies and endgame in the core. Solo and server. Medium pace (Monifactory-like) with expert-level chemistry and resource chains. Quest book in en, pt_br and zh_cn.</td>
+</tr>
+<tr>
+<td>D-375</td>
+<td>Names: GitHub org TypeOmega (renaming GTInfinityAscension and its repos); core TypeOmegaCore with mod ID <code>typeomega</code>, accepting that the ID change breaks GT:IA worlds.</td>
+</tr>
+<tr>
+<td>D-376</td>
+<td>Mod architecture: lib (shared code) + GTNA (generic machines) + TypeOmegaCore (Type Omega content). <code>long</code> on hot paths, BigInteger only for storage and the meter. Wireless team energy network at high scale. High parallelism, batched recipes, idle machines sleep, automated TPS benchmark. AE2 plus a big-number addon. Full performance mod set.</td>
+</tr>
+<tr>
+<td>D-377</td>
+<td>Forks: mixins first; fork only when a mixin cannot fix a blocking defect and upstream will not take the fix.</td>
+</tr>
+<tr>
+<td>D-378</td>
+<td>Workflow: question → artifact → author's choice → decision → implementation → QA → local commit. Push and release only on explicit request. Parallel agents (one per pack for studies, one per repo in a worktree for code), reviewed before merging. Local sessions only.</td>
+</tr>
+<tr>
+<td>D-379</td>
+<td>Revises D-373: Type 0 closes with a small custom fusion reactor at HV (GTCEu fusion stays at LuV); Dyson and Kugelblitz get custom versions at their chapter's tier (Dyson by LuV, Kugelblitz by UHV).</td>
+</tr>
+<tr>
+<td>D-380</td>
+<td>Revises D-372: K uses a tier table instead of <code>÷ 3.5</code>. 1 A of each type's first tier is the integer (EV = 1, ZPM = 2, UEV = 3, OpV = 4; 8 EU/t = 0), linear in log4 of EU/t in between. Megastructure ceiling, 10-minute average and per-team K stand.</td>
+</tr>
+<tr>
+<td>D-381</td>
+<td>Space: the Moon is inside Type 0 and Mars opens Type I. Rocket N is built from ore of destination N−1, as in GTO. Reach is limited by suits/protection per tier early and implants later.</td>
+</tr>
+<tr>
+<td>D-382</td>
+<td>Book size: about 650 quests in Type 0 (primitive age included, GTNH-like) and the same quest density per tier up to MAX. Type Ω content is decided later.</td>
+</tr>
+<tr>
+<td>D-383</td>
+<td>Book: expert chemistry in a parallel chapter per type; parallelism from Steam/MV as in GTL-E; pick-1-of-3 rewards and coins with a shop that may sell basic shortcuts (e.g. LV tanks, as in GTO) but nothing that skips progression; a single difficulty mode; GTCEu tier names.</td>
+</tr>
+<tr>
+<td>D-384</td>
+<td>One coin per civilization type (Type 0 coin, Type I coin…); each type's shop uses its own coin.</td>
+</tr>
+<tr>
+<td>D-385</td>
+<td>No difficulty modes: GTIA Rules' Journey/Normal/Custom presets are not carried into Type Omega.</td>
+</tr>
+<tr>
+<td>D-386</td>
+<td>GTNA's wireless energy (and steam) network may be reworked to run per FTB team, as long as old worlds lose nothing: each player's network migrates to their team (a solo team behaves as today). The Kardashev meter reads this network.</td>
+</tr>
+<tr>
+<td>D-387</td>
+<td>Chemistry may be redesigned: inherited Type 0 lines can be rebuilt rather than ported; Types I–IV get new lines.</td>
+</tr>
+<tr>
+<td>D-388</td>
+<td>Type 0 layout: 650 quests = 520 in 10 sub-chapters (0.0 First Fire … 0.9 Fusion) + 130 in "Chemistry · Type 0" (recipes in GTCEu/GTNA machines). From 0.3 on each sub-chapter opens with a milestone quest plus a "K ≥ decimal" task. No ULV: straight to LV.</td>
+</tr>
+<tr>
+<td>D-389</td>
+<td>Type 0 meter: steam counts at 2 mB = 1 EU. Ceilings: 0.79 with no megastructure, 0.89 after the first, 0.99 after the second; the third closes the type.</td>
+</tr>
+<tr>
+<td>D-390</td>
+<td>Type 0 megastructures: National Dispatch Centre (0.7; Kardashev meter + team wireless hub), Cosmodrome (0.8; rocket assembler + mission control), HV Tokamak (0.9; D-T and D-He3, lunar He-3 doubles output; direct EU). Tier-2 rocket at the end of 0.9; landing on Mars opens Type I.</td>
+</tr>
+<tr>
+<td>D-391</td>
+<td>Type 0 details: "Planetary Credit" coin; ilmenite removed from <code>gtceu:bauxite_vein_end</code> (titanium only via the Moon); decisions put on hold by D-370 are reviewed one by one.</td>
+</tr>
+<tr>
+<td>D-392</td>
+<td>Agronomica is archived: its 4 crops become Greenhouse recipes in TypeOmegaCore. Bees stay under 6 balance rules (only metals from reached planets, one bee per parallel, at most 50 % of same-tier mining per EU, combs enter at the start of the chemistry line, mutation consumes parents, parallel cap). Yggdrasil is kept as a Type II–III megastructure; Crafting Station is kept as is. ZPM biotech gets its own study.</td>
+</tr>
+<tr>
+<td>D-393</td>
+<td>Space: Ad Astra + KubeJS + datapack, with as much as possible in the core or lib. Destinations: Type 0 = Moon; Type I = Mars, Venus, Mercury; later ones in the core. Desh, Ostrum and Calorite become GT materials under their own names. Protection starts with tags (heat, cold, vacuum); radiation/pressure only after a study. The space station is a recipe requirement (zero gravity).</td>
+</tr>
+<tr>
+<td>D-394</td>
+<td>Performance: lock fixes and new mods wait for the benchmark; AsyncParticles goes into the test set.</td>
+</tr>
+<tr>
+<td>D-395</td>
+<td>Work order: per-team wireless first in GTNA with a player → team migration GameTest; next content is the 0.0–0.2 book; repos and mod ID are renamed now.</td>
+</tr>
+<tr>
+<td>D-396</td>
+<td>Revises D-375: GitHub org <code>Type-Omega</code>; mod ID <code>typeomega</code>; packages <code>com.typeomega.core</code> and <code>com.typeomega.lib</code>. Repos: GTIACore → TypeOmegaCore, GTIA-Lib → TypeOmega-Lib, modpack → TypeOmega, Dev-Doc → TypeOmega-Dev-Doc; GTNA and AscensionOptimizer only move org. Local rename first, GitHub after.</td>
+</tr>
+<tr>
+<td>D-397</td>
+<td>Review of GT:IA decisions done: 71 kept, 84 kept with adjustments, 54 revoked.</td>
+</tr>
+<tr>
+<td>D-398</td>
+<td>GT:IA's own alloys (Pulsating, Conductive, Energetic, Vibrant, Phase Matrix, superconducting wires) are left out; they may return if a future reference (e.g. GTNH) justifies it.</td>
+</tr>
+<tr>
+<td>D-399</td>
+<td>Mining is redesigned from scratch in its own Type Omega study; the GT:IA mining package is revoked and kept only as reference.</td>
+</tr>
+<tr>
+<td>D-400</td>
+<td>Tone: GTO-style corporate/irreverent humour and Moni-style explanations stay.</td>
+</tr>
+<tr>
+<td>D-401</td>
+<td>Wireless: steam from Steam age; energy from 0.7 (National Dispatch Centre); lossless in Type I.</td>
+</tr>
+<tr>
+<td>D-402</td>
+<td>Implants: GTO organs become D-381's implants, limiting planetary reach from Type I on; Type 0 uses suits by tags only.</td>
+</tr>
+<tr>
+<td>D-403</td>
+<td>Kept: Type 0 personal dimension (ModernSpace, two plain portals, preset of choice; Industrial Platform) and the GTL Enhanced + GTO content direction, inside the Kardashev scale.</td>
+</tr>
+<tr>
+<td>D-404</td>
+<td>Planets: the first visit is mandatory; afterwards everything comes from data/fragments.</td>
+</tr>
+<tr>
+<td>D-405</td>
+<td>Primitive + Steam are short, GTO-sized (~130 quests, 0.0–0.2); basic AE2 arrives at LV.</td>
+</tr>
+<tr>
+<td>D-406</td>
+<td>Book 0.0–0.2 content: sulfur from the Large Steam Crusher (pyrite), no Nether; GTNA steam multiblocks run recipes up to 32 EU/t as in GTL-E; wireless steam hatches get a recipe in 0.2; the 0.0 Kardashev meter is a simple block; Nexus Structure Terminal as the Coke Oven reward; coins halved (1–3 per quest, 10 per milestone); high-pressure upgrades as leaves; wrought iron stays in 0.0; personal dimension and Industrial Platform in 0.1 after the bronze hull.</td>
+</tr>
+<tr>
+<td>D-407</td>
+<td>Quest book layout reads top to bottom: groups in the order the player does them; leaves, upgrades and bridges branch sideways from the quest that unlocks them; long links hidden as in GTO; at most 30 % backward links (target 0 %), checked by <code>layout_check.py</code>.</td>
+</tr>
+<tr>
+<td>D-408</td>
+<td>Book 0.0–0.4: GTNA lets the wireless steam output hatch work on GTCEu large boilers; Industrial Platform recipe uses the bronze hull; steel wireless steam hatches need an LV circuit; personal dimension portals are a fixed reward. LV: Bayer digestion/precipitation, cryolite and a fluorine source (lepidolite electrolysis) drop to 30 EU/t, Hall-Héroult stays at 120 EU/t in the EBF with 2 hatches; NaOH electrolysis (sodium battery) at 30 EU/t; zinc and antimony by byproduct only until the mining study, which also adds Overworld quartzite and certus; basic AE2 gets LV recipes in the core; Large Furnace is kept; 32 EU/t steam multiblocks accepted; silicon boule at 0.4 accepted.</td>
+</tr>
+<tr>
+<td>D-409</td>
+<td>Chapter 0.0 First Fire: modelled on GTO's opening chapter without survival content; ends at the Steam Solid Boiler (coke oven moves to 0.1); spine splitting into bronze and iron/terminal arms that rejoin at the boiler, GTO size hierarchy, role shapes and halos, script-generated title and headers. The GTCEu Terminal recipe uses redstone instead of red alloy wire; finishing it rewards the Nexus terminal.</td>
+</tr>
+<tr>
+<td>D-410</td>
+<td>New multiblock tooltip standard in GTNH style: <code>Machine Type:</code> line, short colour-keyed description, separators, per-row data tables, special rules, supported-hatch line, <code>Hold [LSHIFT]</code> for structure, mod name last. Replaces the D-244/D-343 layout.</td>
+</tr>
+<tr>
+<td>D-411</td>
+<td>Chapter 0.1 Steam: redo closer to GTO's Steam chapter, left-to-right linear chains, large steam multiblocks included, steel as a Steam-era milestone; Coke Oven rewards charcoal (not the Nexus terminal); Steam Miner waits for the mining study.</td>
+</tr>
+<tr>
+<td>D-412</td>
+<td>Chapter 0.1 Steam v05 approved: left-to-right, ends at First Steel; the four GTNA Large Steam multiblocks and the Leap Forward Blast Furnace follow steel, each linked to its small version; rubber and red alloy move to 0.2.</td>
+</tr>
+<tr>
+<td>D-413</td>
+<td>Steam and steel merge into a single Steam-era mini-chapter ending at the LV machine hull (no ULV step); later mini-chapters shift up by one.</td>
+</tr>
+<tr>
+<td>D-414</td>
+<td>Merged chapter 0.1 Steam and Steel approved (83 quests, ends at the LV machine hull, circuit gates the hull); steam assembly block and three Large Steam machines move to the Electricity chapter; Team Steam Network recipe uses steel plate + vacuum tube.</td>
+</tr>
+<tr>
+<td>D-415</td>
+<td>Chapter 0.2 Electricity approved (LV hull to LV assembler); AE2 moves into 0.2; LV Miner and Large Steam Storage Tank stay out; quartzite quest lists both routes until the mining study.</td>
+</tr>
+<tr>
+<td>D-416</td>
+<td>Chapter 0.3 Blast Furnace approved (LV assembler to MV machine hull, good circuit gates it); graphite vein guaranteed by the mining study; early rutile from bauxite accepted; next is 0.4, early MV, still in Type 0.</td>
+</tr>
+<tr>
+<td>D-417</td>
+<td>Chapter 0.4 MV approved (MV hull to Kanthal coil) with stainless steel added; Bayer keeps a 30 EU/t low-yield route and the native 120 EU/t route; MV parallel multiblocks go to 0.5; Kardashev meter decimals to be recalibrated separately.</td>
+</tr>
+<tr>
+<td>D-418</td>
+<td>Chapter 0.5 Towards HV approved (Kanthal coil to HV machine hull); outline for the end of Type 0: 0.6 Power Grid (HV, PTFE, cleanroom, mega 1), 0.7 Moon (Cosmodrome, T1 rocket), 0.8 Fusion (Kroll titanium, EV circuit, HV Tokamak, T2 rocket; Mars opens Type I).</td>
+</tr>
+<tr>
+<td>D-419</td>
+<td>Chapter 0.6 Power Grid approved (HV hull to mega 1, National Dispatch Center); EV circuit in 0.8 is the nano processor; Nether-free ender eye recipe; mega 1 recipe includes the MV field generator; GTNA wireless hatch recipe requires an item only the mega produces.</td>
+</tr>
+<tr>
+<td>D-420</td>
+<td>Chapter 0.7 Moon approved (~58 quests, ends at the Moon landing); Cosmodrome is a mission-control controller linked to the rocket assembler; lunar probe required; He-3 only from heated regolith.</td>
+</tr>
+<tr>
+<td>D-421</td>
+<td>Type 0 quest book closed (0.0–0.8) as a development beta; nano wafer runs on HV with two HV energy hatches; nano circuits at 480 EU/t in the HV circuit assembler with cleanroom; new pack-exclusive T2 rocket fuel; Type 0 filled to ~520 with platinum line, data orb, nano mainframe, thermal suit and lunar base.</td>
+</tr>
+<tr>
+<td>D-422</td>
+<td>After the Type 0 beta quest book: move to code (core, lib, modpack), rename repositories and the organization to Type-Omega, implement pending recipe/code items from D-406–D-421, and optimise the modpack.</td>
+</tr>
+<tr>
+<td>D-423</td>
+<td>KubeJS only when strictly necessary: Ad Astra changes and other pending recipe work are done in Java in the core or the lib (datagen, registries, mixins).</td>
+</tr>
+<tr>
+<td>D-424</td>
+<td>T2 rocket fuel is Zip-D (borane chain with desh as a slow catalyst, plus liquid oxygen); data orb and nano mainframe at 480 EU/t on HV; platinum/palladium removed from the End sheldonite vein; Type 0 beta closed at 520 quests; code phase starts.</td>
+</tr>
+<tr>
+<td>D-425</td>
+<td>Type 0 megastructure shapes: National Dispatch Center option B, Cosmodrome option C, HV Tokamak option C; MgB2 coil recipe yields 8 and lithium blanket 4; mission control casing renamed to a neutral console casing; energy hatches allowed on any casing; GTCEu decorative blocks allowed; no animated render in Type 0.</td>
+</tr>
+<tr>
+<td>D-426</td>
+<td>LV silicon plate recipe (worse than the EBF one) keeps AE2 in 0.2; Start chapter disabled, 0.0 is the entry; Biomass quests use the LV fermenter; Flux Matrix capacities in a team add up.</td>
+</tr>
+<tr>
+<td>D-427</td>
+<td>The starting kits of the retired Start chapter return as rewards of 0.0 quests, beside the quest that unlocks them: LV Prospector, steel hand tools and tool set, 16 Coke Blocks, 16 Bronze Ingots. The Welcome Mining Kit already covers the steel mining hammer. The per-mode split (a Journey kit with the author's original rewards) was revoked by D-436.</td>
+</tr>
+<tr>
+<td>D-428</td>
+<td>No <code>Hold [LSHIFT]</code> line in multiblock tooltips: Shift does not show the structure in GTCEu. The unused <code>structureHint()</code> option is removed from the TypeOmega Lib tooltip builder (amends D-410).</td>
+</tr>
+<tr>
+<td>D-429</td>
+<td>Multiblock tooltips may start from the original GTNH text (GT5-Unofficial, GTNL, Twist and similar sources, mainly for GTNA machines), adapted to Type Omega's corporate humour. Recorded only; migrating the ~170 GTNA multiblocks is pending. GT5-Unofficial is LGPL-3.0; GTNL was LGPL-3.0 until 2026-10-24 (<code>a90b8cb</code>) and is GPL-3.0 since, so GTNL text is taken only from the last LGPL commit (<code>52345d2</code>). The LGPL requires keeping copyright notices and crediting the source and changes in <code>THIRD_PARTY_NOTICES.md</code>; the licence of any other source must be checked before its text is ported. D-432 updates the text sources: GTNL and Twist Space Technology text is used with the authors' permission.</td>
+</tr>
+<tr>
+<td>D-430</td>
+<td>Multiblock tooltips read the "Supports Multi-Amp, Laser and Wireless Hatches!" line and the modes of machines that switch recipe types from the GTCEu pattern (TypeOmega Lib 0.6.2, <code>GtceuPatterns</code>), without Shift (D-428). The structure section it also introduced was revoked by D-431.</td>
+</tr>
+<tr>
+<td>D-431</td>
+<td>Multiblock tooltips show no structure section (dimensions, controller position, casing and hatch counts) and no pollution line. They keep the mechanics lines, the modes, the "Supports ...!" line, the humour line, the origin and the mod name. The structure and pollution builder methods stay in TypeOmega Lib for other mods, documented as unused by Type Omega. Revokes the structure part of D-430.</td>
+</tr>
+<tr>
+<td>D-432</td>
+<td>Multiblock tooltips carry every mechanics line of the original. For GTNH ports (GT5-Unofficial: TecTech, GoodGenerator, GT++, kekztech, bartworks) each tooltip reproduces all the mechanics lines of the machine's <code>createTooltip()</code> and markdown page at the same level of detail: formulas, percentages per coil, glass or casing tier, speed, EU and parallel bonuses, overclock rules, modes, limits, special hatches, upgrade items and warnings. Numbers come from GTNA's own constants, so where GTNA changed the balance the GTNA value is shown. Humour and description follow Type Omega's corporate tone without dropping information. GTNL and Twist Space Technology ports use their current text with the authors' explicit permission (both are GPL-3.0; the permission covers assets, models and text), and <code>eye_of_wood</code> keeps the in-game "Source: TST" line. GTNA originals and GTO/GTL ports get the full mechanics from GTNA's code in GTNA's own words. No structure or pollution lines (D-431). A GameTest checks a minimum number of mechanics lines per machine and a few values against the code. An earlier answer the same day ("Twist text not used") was withdrawn by the author. Done on 2026-11-24: every GTNA multiblock (GTNH, GTNL, GTO, GTL and GTLsupb ports and the GTNA originals) now uses the lib layout with its full mechanics; the old generated layout was removed, and a GameTest and a unit test fail if a multiblock is left without a lib tooltip. GTLCore ships no licence file, so GTL ports use GTNA's own text written from the code.</td>
+</tr>
+<tr>
+<td>D-433</td>
+<td>Core finish under the Type Omega name. (1) Revoked by D-436: there are no world rules. (2) The mod name shows once in item tooltips, as <strong>TypeOmega Core</strong> (EMI adds it to every tooltip; a client mixin running after EMI keeps only the last line). (3) The tooltips of the 27 core multiblocks follow D-432: every mechanic with numbers from the logic's constants, modes, the "Supports" line and the corporate humour, without structure or pollution (D-431). Four Type Omega creative tabs: Machines; Multiblocks and Megastructures; Materials and Items; Blocks and Casings. (4) The Crafting Station works like the Tinkers' Construct station of GTNH: the grid is kept in the block (dropped when broken), containers on all six sides are tabs (a double chest counts once, another station never), shift-click on the result fills the neighbour's stacks before the player's, items move neighbour to player and player to the open tab's neighbour, an item brought from a neighbour goes back to it, and a button dumps the grid.</td>
+</tr>
+<tr>
+<td>D-434</td>
+<td>Renders of the GTNA original multiblocks. Machines without a render come first, then the upgrades of the existing ones. The Nexus ME Hypercore gets a holographic core: one cube per crafting co-processor in orbit, data streams to the CPU interface and a pulse while a crafting job runs. The Nexus Flux Matrix gets a plasma column; the Nexus Assembly Forge and the ME Storage also get renders, but these three wait because their structures may still change. Every GTNA machine render follows one client option with three levels, OFF, LOW and HIGH (<code>client.machineRenders</code>): OFF hides only the effects (parts taken out of the world, such as the Forge of Gods rings, keep drawing, and the Stellar Chamber keeps its gravity and sound), LOW halves the effect range and drops the costly passes. The Antimatter Collider Ring is brought to the Stellar Chamber's level, and the Kinetic Orbital Lance and the Dimensional Rift Gate get the upgrades of the render proposal.</td>
+</tr>
+<tr>
+<td>D-435</td>
+<td>GTNH-style illustrated recipe screens. SH-Better-UI is a reference only (MIT; any ported code is credited). The screens live in a <code>ui</code> module of TypeOmega Lib on top of LDLib (0.7.0). Look: each recipe type has a pixel-art background of its process with the slots and tanks drawn into it, on the GTCEu bevelled grey, and under it Total EU, Usage with the tier colour, Time and the type's own fields. Mixed approach: <code>.rtui</code> files for fixed layouts, <code>setRecipeUI</code> for dynamic ones, and native EMI categories only for the GTNA originals, which have no GT recipe. First batch: Tokamak Fusion (core, start-up EU and ignition temperature from the constants) and EMI pages for the Antimatter Collider Ring, Dimensional Rift Gate, Kinetic Orbital Lance and Stellar Containment Chamber (rules read from their cores). The same widgets serve EMI and the machine GUI (the Tokamak gets a Fusion tab with the same screen). New art awaits the author's review.</td>
+</tr>
+<tr>
+<td>D-436</td>
+<td>One mode, no world rules. Every Type Omega world uses the values of the former Normal preset. The whole rules system is removed: the screen, the create-world button, the <code>/typeomega rules</code> command, the Journey/Normal/Custom presets, <code>gtia_rules.json</code>, the restart screen and their texts. Everything that read a rule uses the fixed Normal value: maintenance from LV, no wireless steam hatch recipes (steam through pipes), steam and recipe balance at x1, the Normal GTCEu recipe and machine settings, 1% catalyst wear, organ cost x2, 100,000 negentropy with the ending on, extra regeneration from food 15. Old worlds with <code>gtia_rules.json</code> load without errors and ignore the file. GTNA steam tooltips show a variant label only when there is more than one variant, so they show a plain number. The quest book loses the hidden modes chapter, the mode quests and the Journey kits; the 0.0 and Welcome kits keep the Normal rewards with the same ids. Reinforces D-383/D-385; revokes the rules part of D-433, the per-mode split of D-427 and "the GTIA Rules stay" of D-343.</td>
+</tr>
+<tr>
+<td>D-437</td>
+<td>New shapes for three GTNA multiblocks, chosen by the author. <strong>ME Storage</strong>: the "Data Conduit", an octagonal data duct on a titanium keel; each repeated slice holds 6 storage cores, 1 to 128 slices (768 cores at most, as before), one ME Storage Access Hatch on the 3×3 front panel. <strong>Nexus Flux Matrix</strong>: the "Tesla Coil", a wide steel base, the 7×7 capacitor column behind borosilicate glass, loose busbars and a 21-block discharge toroid; each repeated floor holds 25 capacitors, 2 to 30 floors (750 at most, the unlimited threshold); energy hatches only on the front and back 3×3 panels. <strong>Nexus Assembly Forge</strong>: the "Orbital Forge of Crossed Rings", a chamfered cross base, two crossed rings and an octahedral core on a europium spindle; hatches only on the 5×5 front panel, and the plain zirconia behind it counts toward the minimum of 20, so every panel slot can hold a hatch; lamps about 2 % of the blocks; nothing floats. Each machine has a formation GameTest and a negative one.</td>
+</tr>
+<tr>
+<td>D-438</td>
+<td>The HV Tokamak produces EU every tick, like the fusion reactors: its recipes output 2 A (D-T) and 4 A (D-He3) of HV per tick instead of one lump per cycle. The structure needs exactly 4 HV Dynamo Hatches, one per amp of the strongest fuel, and the preview shows all four; the tooltip, the recipe screen and the code comments read the same constants.</td>
+</tr>
+<tr>
+<td>D-439</td>
+<td>Nexus Terminal v2 (GTNA). The terminal adopts the scan → plan → execute architecture and the functions of the gt_shanhai Ultimate Terminal (LGPL-3.0), rewritten in GTNA style and credited in <code>THIRD_PARTY_NOTICES.md</code> where the code stays close. The item and the planner live in GTNA; the screens live in the TypeOmega Lib <code>ui</code> module (D-435). First batch: a reusable build plan, batched ME extraction through the AE2 API (no reflection), cached selections and candidates, one <code>setBlock</code> per block, per-tick placement (instant up to about 4096 cells, above that a server job with a progress bar and cancel), a read-only scan with coloured boxes in the world, a Materials tab with "Request from ME", a report, safe replacement, full disassembly, a hatch plan and a new four-tab screen (Build, Tiers, Hatches, Materials) in the GTNH look. Replacing a block or tier happens directly, without confirmation, but returns the old block and rolls back if placing fails. Disassembly sends blocks to the ME first, then to the inventory, and refuses if they do not fit. Hatch placement keeps its limits and gains a per-function plan (type and tier). The ME link has no range or dimension limit. Missing items with a pattern are requested from AE automatically when building. Later (P2): ghost hologram, area mode. No keybinds. One item; ME functions need an ME network. Fluids in structures only when a multiblock needs them.</td>
+</tr>
+<tr>
+<td>D-440</td>
+<td>Nexus Terminal "Engineering Console" (GTNA). The terminal window becomes a console: numbered steps (structure, tiers, hatches, materials), the step page and a fixed action bar (scan, build, cancel, report); a Machines tab lists multiblocks within 32 blocks; a Saved Structures tab stores a built structure under a name and pastes it onto another controller of the same machine. Tiers can be swapped family by family. The last three follow ideas of GregTech Terminals (BgameXL, MIT), credited in GTNA's THIRD_PARTY_NOTICES.</td>
+</tr>
+<tr>
+<td>D-441</td>
+<td>Omega QA lives in its own repository (<code>Type-Omega/Omega-QA</code>, mod id <code>omegaqa</code>), like GTNH's Horizon-QA. The QA kit (GameTest DSL, rigs, sweeps, JUnit/JSON reports, perf benches, QA wand, AE2/EMI/FTB bridges, SPIs) left TypeOmega Lib, which keeps only shared gameplay code. Players never load QA tooling, and it changes at a different pace than the lib.</td>
+</tr>
+<tr>
+<td>D-442</td>
+<td>AE2 pieces from GTOCore are reimplemented in the core, not copied: ME Interface (II)-(V), Acceleration Card (II)-(V), ME Requestable Input Bus/Hatch and the wireless ME network, with GTOCore's mechanics and numbers written from scratch (GTOCore is PolyForm Noncommercial, so it is a reference only). AE2 Wireless Terminals joins the pack. The wireless terminal is AE2 WCWT (MIT), not GTOCore's; the core adds automatic pattern upload by recipe type, reimplemented from ExtendedAE Plus (LGPL-3.0, credited) without needing it. ME Placement Tool is in the pack. Copying the code was rejected because it would tie those files to a noncommercial licence.</td>
+</tr>
+<tr>
+<td>D-443</td>
+<td>The Kardashev Meter stays a single block in the first chapter with its current recipe, and gets its own screen (Summary, History, Sources tabs) plus a HUD toggle like the Flux Matrix. The official K stays the per-tier table of D-380; the screen also shows the power in watts and Sagan's K as an extra line. Wireless networks, boilers and local GTCEu generators (Tokamak included) count, with no double counting through Wireless Dynamo Hatches. Six hours of history. The HUD editor moves from GTNA to TypeOmega Lib so all HUDs share one editor and key.</td>
+</tr>
+<tr>
+<td>D-444</td>
+<td>The wireless ME network of GTLCore (LGPL-3.0, ported with credit) goes into GTNA and replaces the small connector/configurator the core got in D-442: a Wireless Network Core with its own screen, a binding tool with a network picker on a key (works from any slot, Curios included), auto-binding when a block is sneak-placed, any AE2 target as a member, team-owned bindings. GTLCore's extra terminals come later.</td>
+</tr>
+<tr>
+<td>D-445</td>
+<td>Megastructures v2. Visual direction "dark hull and light": charcoal palette with one accent per megastructure, emissive parts, no new shader, same sizes. 41 new blocks (37 exclusive, 4 shared), delivered in waves; pilot on Yggdrasil, Nidavellir and Star Lifter. The controller sits on a 7×5 service deck fixed to a static part of the structure at mid height; the separate station and bridge are removed; the 3×3 hatch area stays. Each hull is researched from the previous megastructure's hull, at the controller's tier, with a high yield per craft.</td>
+</tr>
+<tr>
+<td>D-446</td>
+<td>Megastructures are converted from the original 3D models of Gigastructural Engineering &amp; More and Sparble's Stellar Hyperconstructs, phase by phase, provisionally until the creators grant permission (requested in parallel; otherwise back to own models). Mod textures are not used. The Neutronium Gigaforge joins as a second megastructure that feeds the Nidavellir Hyperforge; both require a neutron star, pulsar or magnetar. The Penrose Sphere becomes a second megastructure on the HRAE-MC's black hole. The Assembly Yard gets six-fold symmetry with its six plasma pumps. Birch World becomes a habitat; the Suprashell keeps time dilation. The Planetary Seeder Nexus, Equatorial Shipyard and Basement Gateway join in waves after the Nidavellir, HRAE-MC and Yard fixes. As built: the Seeder Nexus is a cheaper Yggdrasil companion (greenhouse and biomass recipes; the Seeder-to-Yggdrasil upgrade path is deferred); the Basement Gateway works around any star and receives the matter of a Solar System Disintegrator in the same system.</td>
+</tr>
+<tr>
+<td>D-447</td>
+<td>The Nexus Terminal screen takes the futuristic purple-and-black look of GTCEu Terminals, with the same functions as before. The look is a selectable theme of TypeOmega Lib's ToolWindow (other tools keep the grey GTNH look); frames and buttons are drawn in code, with no 9-slice PNGs; Dismantle stays a toggle in step 1 with a red warning and a quick preview; the window keeps its fixed 420×236 size.</td>
+</tr>
+<tr>
+<td>D-448</td>
+<td>Megastructure rendering: the block structure stays what the player builds and what forms the machine; once formed, the client draws the original 3D model over it with our own material (no mod textures), moving parts and emissive parts, to come as close to 1:1 as possible. Provisional until the creators grant permission, like D-446. Tested on one megastructure first.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Type Omega team
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>
